@@ -8,7 +8,7 @@ public class StringCalculator {
 		}
 		else{
 			String delimiter = ",";
-			String numList[] = splitNumbers(text, delimiter); 
+			String numList[] = splitNumbers(text, delimiter+ "|\n"); 
 			return sum(numList);
 			}
 			
