@@ -8,12 +8,15 @@ public class StringCalculator {
 		}
 		else{
 			String delimiter = ",";
-			String numList[] = splitNumbers(text, delimiter+ "|\n"); 
-			return sum(numList);
+			if(text.matches("//(.*)\n(.*)")){
+				delimiter = Character.toString(text.charAt(2));
+				text = text.substring(4);
 			}
 			
-			
+			String numList[] = splitNumbers(text, delimiter + "|\n");
+			return sum(numList);
 		}
+	}
 
 	private static int toInt(String number){
 		return Integer.parseInt(number);
