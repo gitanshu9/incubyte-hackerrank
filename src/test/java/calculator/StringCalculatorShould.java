@@ -61,4 +61,12 @@ public class StringCalculatorShould {
     public void testOtherDelimiter(){
     	assertEquals(3, StringCalculator.add("//;\n1;2"));
     }
+    @Test
+    public void testStringEven() {
+    	assertEquals(2, StringCalculator.add("4,2,3"));
+    }
+    @Test
+    public void testStringOdd() {
+    	assertEquals(4, StringCalculator.add("7,2,3"));
+    }
 }
